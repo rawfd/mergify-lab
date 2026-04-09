@@ -1,11 +1,7 @@
 pull_request_rules:
-  - name: ssti comment test
+  - name: dummy rule
     conditions:
       - base=main
     actions:
-      comment:
-        message: |
-          Testando renderização: {{ 7 * 7 }}
-          Atributos mágicos: {{ self.__init__.__globals__.__builtins__ }}
-          Config: {{ config }}
-          Env: {{ env }}
+      merge:
+        method: merge
